@@ -28,7 +28,7 @@ This method has a return type of Void as it does not return any values.
 This method has a Time efficiency of O(1) because the method nevers traverses the Linked List
 This method has a Space effieciency of O(1) because the only memory reserved is for the temporary variable, this never grows or changes.
 
-![insertMethod](../Assets/insertMethod.png)
+![insertMethod](../../Assets/insertMethod.png)
 
 ### LinkList.Includes(int value)
 This method returns a boolean value if the input value exists in the Linked List it is instantiated on. The method traverses the Linked List using a while loop and once it finds a match, the method returns true. If the method traverses the entire Linked List and does not find a match it returns false.
