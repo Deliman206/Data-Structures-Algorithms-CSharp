@@ -36,7 +36,7 @@ This method returns a boolean value if the input value exists in the Linked List
 This method has a Time efficiency of O(n) where "n" is the amount of Nodes in the Linked List. This is because in our worst case scenario (where the value does not exist in the Linked List) the method will have to traverse the entire Linked List and thus visit every Node of the Linked List.
 This method has a Space efficiency of O(1) because the method does not require storage that would grow or change.
 
-![includesMethod](Assets/includesMethod.png)
+![includesMethod](../../includesMethod.png)
 
 ### LinkList.Print()
 This method returns a string variable, where this string is the visual for a given Linked List which this method is instantiated on. This method will also write the Linked List to the console using Console.WriteLine();
@@ -44,3 +44,5 @@ This method returns a string variable, where this string is the visual for a giv
 This method has a Time efficiency of O(n) where "n" is the amount of Nodes in the Linked List. This method will have to visit every Node in order to add its value to the return String. 
 
 This method has a Space efficiency of O(1) because the only memory storage for this method is the return string. This never grows or changes.
+
+![printMethod](../../Assets/printMethod.png)
