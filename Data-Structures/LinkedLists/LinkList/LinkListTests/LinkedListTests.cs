@@ -1,15 +1,15 @@
 using System;
 using Xunit;
-using LinkedLists.Classes;
+using LinkedList.Classes;
 
-namespace LinkedListTests
+namespace LinkListTests
 {
     public class InsertTest
     {
         [Fact]
         public void InsertOneValue()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
             lL.Insert(5);
             Assert.Equal(5, lL.Head.Value);
@@ -17,7 +17,7 @@ namespace LinkedListTests
         [Fact]
         public void InsertTwoValues()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
             lL.Insert(5);
             lL.Insert(9);
@@ -26,9 +26,9 @@ namespace LinkedListTests
         [Fact]
         public void InsertZeroValues()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
-            Assert.Null(lL.Head.Value);
+            Assert.Null(lL.Head);
         }
     }
     public class IncludesTest
@@ -36,7 +36,7 @@ namespace LinkedListTests
         [Fact]
         public void ValueAtTail()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
             lL.Insert(1);
             lL.Insert(3);
@@ -47,7 +47,7 @@ namespace LinkedListTests
         [Fact]
         public void ValueDNE()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
             lL.Insert(2);
             lL.Insert(3);
@@ -59,7 +59,7 @@ namespace LinkedListTests
         [Fact]
         public void ValueAtMiddle()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
             lL.Insert(2);
             lL.Insert(3);
@@ -74,19 +74,19 @@ namespace LinkedListTests
         [Fact]
         public void PrintLinkedList()
         {
-            LinkList lL = new LinkList();
+            LList lL = new LList();
 
             lL.Insert(2);
             lL.Insert(3);
             lL.Insert(4);
-            
+
             Assert.Equal("4 -> 3 -> 2 -> NULL", lL.Print());
         }
         [Fact]
-        public void PrintSingleNodeLinkedList()
+        public void PrintEmptyLinkedList()
         {
-            LinkList lL = new LinkList();
-            Assert.Equal("-> NULL", lL.Print());
+            LList lL = new LList();
+            Assert.Equal("NULL", lL.Print());
         }
     }
 }

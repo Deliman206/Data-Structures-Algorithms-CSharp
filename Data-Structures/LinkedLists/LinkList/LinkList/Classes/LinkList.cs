@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LinkedLists.Classes
+namespace LinkedList.Classes
 {
-    public class LinkList
+    public class LList
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-        public LinkList ()
+        public LList()
         {
             Head = null;
         }
@@ -40,6 +40,10 @@ namespace LinkedLists.Classes
         }
         public string Print()
         {
+            if (Head == null)
+            {
+                return "NULL";
+            }
             string printLinkedList = "";
             Current = Head;
             while (Current.Next != null)
