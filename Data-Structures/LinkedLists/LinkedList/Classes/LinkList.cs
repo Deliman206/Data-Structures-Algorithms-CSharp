@@ -9,9 +9,9 @@ namespace LinkedLists.Classes
         public Node Head { get; set; }
         public Node Current { get; set; }
 
-        public LinkList (Node node)
+        public LinkList ()
         {
-            Head = node;
+            Head = null;
         }
 
         public void Insert(int value)

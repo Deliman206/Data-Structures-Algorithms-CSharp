@@ -46,3 +46,26 @@ This method has a Time efficiency of O(n) where "n" is the amount of Nodes in th
 This method has a Space efficiency of O(1) because the only memory storage for this method is the return string. This never grows or changes.
 
 ![printMethod](../../Assets/printMethod.png)
+
+### LinkList.Append(int value)
+This method takes the input newValue and makes a new Node then inserts the node before the first Node with a value of input value. 
+
+This method has a Time efficiency of O(n) where n is the amount of Nodes in the Linked List. This is because in order to add a node to the end of the Linked List, the method must traverse the entire Linked List.
+This method has a Space efficieny of O(1) because no extra memory is allocated to run this method.
+
+![appendMethod](../../Assets/appendMethod.png)
+
+### LinkList.InsertBefore(int value, int newValue)
+This method takes the input newValue and makes a new Node then inserts the node before the first Node with a value of input value. 
+
+It has a Time efficiency of O(n) where n is the amount of Nodes in the Linked List. This is because in a worst case scenario the node with a vaklue of input value is at the end of the Linked List and the method would then traverse the entire Linked List.
+This method has a Space efficiency of O(1) because no extra memory is allocated to run this method.
+
+![insertBeforeMethod](../../Assets/insertBeforeMethod.png)
+### LinkList.InsertAfter(int value, int newValue)
+Takes the input newValue and makes a new Node then inserts the node after the first Node with a value of input value
+
+It has a Time efficiency of O(n) where n is the amount of Nodes in the Linked List. This is because in a worst case scenario the node with a vaklue of input value is at the end of the Linked List and the method would then traverse the entire Linked List.
+This method has a Space efficiency of O(1) because no extra memory is allocated to run this method.
+
+![insertAfterMethod](../../Assets/insertAfterMethod.png)
