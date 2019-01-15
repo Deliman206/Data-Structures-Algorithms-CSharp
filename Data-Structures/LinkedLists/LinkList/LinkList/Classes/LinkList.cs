@@ -54,5 +54,44 @@ namespace LinkedList.Classes
             printLinkedList += $"{Current.Value} -> NULL";
             return printLinkedList;
         }
+        public void Append(int value)
+        {
+            Node node = new Node(value);
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+            Current.Next = node;
+        }
+        public void InsertBefore(int value, int newValue)
+        {
+            Node node = new Node(newValue);
+            Current = Head;
+            while(Current.Next.Value != value)
+            {
+                if (Current == null)
+                {
+                    return;
+                }
+                Current = Current.Next;
+            }
+            node.Next = Current.Next;
+            Current.Next = node;
+        }
+        public void InsertAfter(int value, int newValue)
+        {
+            Node node = new Node(newValue);
+            Current = Head;
+            while (Current.Value != value)
+            {
+                if (Current == null)
+                {
+                    return;
+                }
+                Current = Current.Next;
+            }
+            node.Next = Current.Next;
+            Current.Next = node;
+        }
     }
 }
