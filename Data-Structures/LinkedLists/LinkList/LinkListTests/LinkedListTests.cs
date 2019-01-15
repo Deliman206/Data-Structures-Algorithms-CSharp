@@ -89,4 +89,95 @@ namespace LinkListTests
             Assert.Equal("NULL", lL.Print());
         }
     }
+    public class AppendTest
+    {
+        [Fact]
+        public void AppendToList()
+        {
+            LList lL = new LList();
+
+            lL.Insert(5);
+            lL.Insert(9);
+            lL.Append(1);
+
+            Assert.Equal("9 -> 5 -> 1 -> NULL", lL.Print());
+        }
+        [Fact]
+        public void AppendToEmptyList()
+        {
+            LList lL = new LList();
+            lL.Append(1);
+            Assert.Equal(1, lL.Head.Value);
+        }
+    }
+    public class InsertBeforeTest
+    {
+        [Fact]
+        public void InsertBeforeHead()
+        {
+            LList lL = new LList();
+            lL.Insert(5);
+            lL.Insert(9);
+            lL.InsertBefore(9, 6);
+            Assert.Equal("6 -> 9 -> 5 -> NULL", lL.Print());
+        }
+        [Fact]
+        public void InsertBeforeInList()
+        {
+            LList lL = new LList();
+            lL.Insert(5);
+            lL.Insert(4);
+            lL.Insert(7);
+            lL.Insert(9);
+            lL.InsertBefore(4, 6);
+            Assert.Equal("9 -> 7 -> 6 -> 4 -> 5 -> NULL", lL.Print());
+        }
+        [Fact]
+        public void InsertBeforeDNEValue()
+        {
+            LList lL = new LList();
+            lL.Insert(5);
+            lL.Insert(4);
+
+            lL.Insert(7);
+            lL.Insert(9);
+            lL.InsertBefore(10, 6);
+            Assert.Equal("9 -> 7 -> 4 -> 5 -> NULL", lL.Print());
+        }
+    }
+    public class InsertAfterTest
+    {
+        [Fact]
+        public void InsertAfterHead()
+        {
+            LList lL = new LList();
+            lL.Insert(5);
+            lL.Insert(9);
+            lL.InsertAfter(9, 6);
+            Assert.Equal("9 -> 6 -> 5 -> NULL", lL.Print());
+        }
+        [Fact]
+        public void InsertAfterInList()
+        {
+            LList lL = new LList();
+            lL.Insert(5);
+            lL.Insert(4);
+            lL.Insert(7);
+            lL.Insert(9);
+            lL.InsertAfter(4, 6);
+            Assert.Equal("9 -> 7 -> 4 -> 6 -> 5 -> NULL", lL.Print());
+        }
+        [Fact]
+        public void InsertAfterDNEValue()
+        {
+            LList lL = new LList();
+            lL.Insert(5);
+            lL.Insert(4);
+            lL.Insert(7);
+            lL.Insert(9);
+            lL.InsertAfter(10, 6);
+
+            Assert.Equal("9 -> 7 -> 4 -> 5 -> NULL", lL.Print());
+        }
+    }
 }
