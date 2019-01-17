@@ -57,10 +57,12 @@ namespace MergeListTest
         [Fact]
         public void ListTwoLongerThanListOne()
         {
-            // 1 -> null
+            // 5 -> 1 -> null
             LList lL1 = new LList();
             lL1.Insert(1);
-            
+            lL1.Insert(5);
+
+
             // 3 -> 2 -> 6 -> 5 -> null
             LList lL2 = new LList();
             lL2.Insert(5);
@@ -68,13 +70,15 @@ namespace MergeListTest
             lL2.Insert(2);
             lL2.Insert(3);
 
-            // 1 -> 3 -> 2 -> 6 -> 5 -> null
+            // 5 -> 3 -> 1 -> 2 -> 6 -> 5 -> null
             LList solution = new LList();
             solution.Insert(5);
             solution.Insert(6);
             solution.Insert(2);
-            solution.Insert(3);
             solution.Insert(1);
+            solution.Insert(3);
+            solution.Insert(5);
+
 
             Assert.Equal(solution.Print(), Program.MergeLists(lL1, lL2).Print());
         }

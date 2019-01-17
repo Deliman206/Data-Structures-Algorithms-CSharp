@@ -13,7 +13,7 @@ namespace MergeList
             lL1.Current = lL1.Head;
             lL2.Current = lL2.Head;
 
-            while (lL1.Current != null)
+            while (lL2.Current != null)
             {
                 Node temp = lL1.Current.Next; 
                 lL1.Current.Next = lL2.Current; 
