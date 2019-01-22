@@ -13,8 +13,9 @@ namespace StacksQueues.Classes
         {
             Node temp = top;
             top = node;
-            node.Next = top;
+            node.Next = temp;
         }
+
         public Node Pop()
         {
             try
@@ -29,6 +30,7 @@ namespace StacksQueues.Classes
                 throw;
             }
         }
+
         public Node Peak()
         {
             return top;
