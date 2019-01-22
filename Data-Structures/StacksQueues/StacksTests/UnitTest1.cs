@@ -27,6 +27,7 @@ namespace StacksTests
             stack.Push(nodeTwo);
 
             Assert.True(stack.top.Value == 2);
+            Assert.True(stack.top.Next.Value == 1);
         }
     }
     public class PopTests
