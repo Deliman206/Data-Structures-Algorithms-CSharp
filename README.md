@@ -5,6 +5,8 @@
 * Code Challenges
   - Insert and Shift Array
   - Binary Search
+  - Queue using Two stacks
 
 * Data Structures
-  - Linked List
+  - Linked List & Nodes
+  - Stacks & Queues
