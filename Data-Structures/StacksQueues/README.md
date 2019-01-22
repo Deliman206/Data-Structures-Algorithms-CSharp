@@ -16,8 +16,7 @@ Now that the classes have been called to the project they can be instantiated us
 ## Stacks
 The `Stacks` class has one property and three methods 
 
-```
-C#
+```C#
 public class Stacks
 {
   public Node top { get; set; } = null;
@@ -68,8 +67,7 @@ It does not maniplate the stack.
 ## Queues
 The `Queues` class has two property and three methods
 
-```
-C#
+```C#
 public class Queues
 {
   public Node front { get; set; } = null;
