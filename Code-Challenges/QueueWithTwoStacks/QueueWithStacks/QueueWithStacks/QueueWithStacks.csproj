@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="LinkedList">
+      <HintPath>..\..\..\..\Data-Structures\LinkedLists\LinkList\LinkList\bin\Debug\netcoreapp2.1\LinkedList.dll</HintPath>
+    </Reference>
+    <Reference Include="StacksQueues">
+      <HintPath>..\..\..\..\Data-Structures\StacksQueues\StacksQueues\bin\Debug\netcoreapp2.1\StacksQueues.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
