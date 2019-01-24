@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AnimalShelter.Classes
 {
-    class Animal
+    public class Animal
     {
         public string Type { get; set; }
         public Animal Next { get; set; }
@@ -13,5 +13,6 @@ namespace AnimalShelter.Classes
         {
             Type = type;
         }
+        public Animal() { }
     }
 }

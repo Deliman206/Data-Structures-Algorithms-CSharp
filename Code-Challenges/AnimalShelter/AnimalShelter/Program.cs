@@ -6,7 +6,7 @@ namespace AnimalShelter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to Animal Shelter. There are no more Bulldogs, I adopted them all!!!");
         }
     }
 }
