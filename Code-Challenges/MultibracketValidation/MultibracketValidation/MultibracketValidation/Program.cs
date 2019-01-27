@@ -30,6 +30,7 @@ namespace MultibracketValidation
             for (int i = 0; i < inputChar.Length; i++)
             {
                 if (!eventCharacters.Contains(inputChar[i])) continue;
+
                 else if (inputChar[i] == bracket.close)
                 {
                     try
@@ -40,7 +41,6 @@ namespace MultibracketValidation
                     }
                     catch (Exception)
                     {
-
                         return false;
                     }
                 }
@@ -67,7 +67,6 @@ namespace MultibracketValidation
                     }
                     catch (Exception)
                     {
-
                         return false;
                     }
                 }
@@ -85,3 +84,5 @@ namespace MultibracketValidation
         }
     }
 }
+
+
