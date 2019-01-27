@@ -33,23 +33,25 @@ namespace AnimalShelter.Classes
         {
             Animal animalToAdopt = new Animal();
 
-            for (int i = 0; i < TotalAnimals -1; i++)
+            for (int i = 0; i < TotalAnimals; i++)
             {
-                // New Animal to break .next chain
-                Animal x = new Animal(Front.Type);
-
-                // Move Next Animal up in line
-                Front = Front.Next;
-
                 // Does the animal get adopted?
                 // Yes
                 if (Front.Type == animal.Type && animalToAdopt.Type == null)
                 {
                     animalToAdopt.Type = animal.Type;
+                    i++;
+                    continue;
                 }
                 // NO
                 else
                 {
+                    // New Animal to break .next chain
+                    Animal x = new Animal(Front.Type);
+
+                    // Move Next Animal up in line
+                    Front = Front.Next;
+
                     // Add Animal x to Rear
                     Rear.Next = x;
 

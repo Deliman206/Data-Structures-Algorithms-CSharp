@@ -16,6 +16,7 @@ namespace AnimalShelterTests
 
             Assert.True(shelter.Rear.Type == "Dog");
             Assert.True(shelter.Front.Type == "Dog");
+            Assert.True(shelter.Front.Next == null);
         }
         [Fact]
         public void EnqueueIntoShelter()
@@ -24,7 +25,6 @@ namespace AnimalShelterTests
             Animal dog = new Animal("Dog");
             Animal cat = new Animal("Cat");
             Animal turtle = new Animal("Turtle");
-
 
             shelter.Enqueue(dog);
             shelter.Enqueue(cat);
@@ -67,20 +67,20 @@ namespace AnimalShelterTests
             Shelter shelter = new Shelter();
             Animal dog = new Animal("Dog");
             Animal cat = new Animal("Cat");
-            Animal turtle = new Animal("Turtle");
 
             Animal testCat = new Animal("Cat");
-
+            Animal testDog = new Animal("Dog");
+            
             shelter.Enqueue(dog);
             shelter.Enqueue(dog);
             shelter.Enqueue(dog);
             shelter.Enqueue(cat);
             shelter.Enqueue(dog);
             shelter.Enqueue(cat);
-
 
             Assert.True(shelter.Dequeue(cat).Type == cat.Type);
             Assert.Equal(testCat.Type, shelter.Rear.Type);
+            Assert.Equal(testDog.Type, shelter.Front.Type);
         }
     }
 }
