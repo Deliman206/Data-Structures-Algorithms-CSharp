@@ -23,4 +23,4 @@ O(1) because while a new Node is instantiated, no new stack is being created and
 O(1) because  no new stack is being created and neither the unload or load stack will have more than the total number of Nodes in the pseudo queue combines.
 
 ## White Board
-![PseudoQueue](Assets/pseudoQueue.JPG)
+![PseudoQueue](../../Assets/pseudoQueue.JPG)
