@@ -41,6 +41,13 @@ namespace FizzBuzzTreeTests
             
             Assert.Equal(btT.Root.ToString(), Program.FizzBuzzTree(bt).Root.ToString());
         }
+        [Fact]
+        public void TestWithNoTree()
+        {
+            BinaryTree bt = new BinaryTree();
+
+            Assert.Null(Program.FizzBuzzTree(bt).Root);
+        }
     }
     public class FizzBuzzCheck
     {
