@@ -4,7 +4,7 @@ using Trees.Classes;
 
 namespace FindMaxValue
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -30,7 +30,7 @@ namespace FindMaxValue
         }
         public static int FindMaxValue(BinaryTree bt)
         {
-            int maxValue = int.MinValue;
+            int maxValue = bt.Root.Value;
             Queue que = new Queue();
 
             if(bt.Root != null)
