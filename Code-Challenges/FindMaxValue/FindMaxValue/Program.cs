@@ -32,22 +32,16 @@ namespace FindMaxValue
         {
             int maxValue = bt.Root.Value;
             Queue que = new Queue();
-
             if(bt.Root != null)
+                que.Enqueue(bt.Root);
+            while(que.Count != 0)
             {
-                if (bt.Root.Left != null)
-                    que.Enqueue(bt.Root.Left);
-                if (bt.Root.Right != null)
-                    que.Enqueue(bt.Root.Right);
-                while(que.Count != 0)
-                {
-                    Node node = que.Dequeue() as Node;
-                    maxValue = CheckMax(maxValue, node.Value);
-                    if (node.Left != null)
-                        que.Enqueue(node.Left);
-                    if (node.Right != null)
-                        que.Enqueue(node.Right);
-                }
+                Node node = que.Dequeue() as Node;
+                maxValue = CheckMax(maxValue, node.Value);
+                if (node.Left != null)
+                    que.Enqueue(node.Left);
+                if (node.Right != null)
+                    que.Enqueue(node.Right);
             }
             return maxValue;
         }
