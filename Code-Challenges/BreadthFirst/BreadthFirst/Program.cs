@@ -30,19 +30,18 @@ namespace BreadthFirst
             BreadthFirst(bt);
             Console.Read();
         }
+        /// <summary>
+        /// Method that takes a Binary Tree and visits nodes by level
+        /// </summary>
+        /// <param name="bt">Binary Tree</param>
+        /// <returns>String of Node Values by Level</returns>
         public static string BreadthFirst(BinaryTree bt)
         {
             string solution = "";
             Queue que = new Queue();
             if (bt.Root != null)
             {
-                Console.WriteLine(bt.Root.Value);
-                solution += $"{ bt.Root.Value } ";
-                if (bt.Root.Left != null)
-                    que.Enqueue(bt.Root.Left);
-                if (bt.Root.Right != null)
-                    que.Enqueue(bt.Root.Right);
-
+                que.Enqueue(bt.Root);
                 while (que.Count != 0)
                 {
                     // Sean - When using the System.Collections.Queue
