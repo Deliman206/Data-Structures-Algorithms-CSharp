@@ -3,13 +3,14 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using Faker;
+using System.Collections;
 
 namespace GraphDataStructure.Classes
 {
     public class Graph
     {
         public List<Node> Vertecies { get; set; } = new List<Node>();
-        public Dictionary<int, int> Map { get; set; } = new Dictionary<int, int>();
+        public Dictionary<Node, bool> Map { get; set; } = new Dictionary<Node, bool>();
 
         /// <summary>
         /// Add Node to Verticies property
@@ -62,6 +63,34 @@ namespace GraphDataStructure.Classes
         public int Size()
         {
             return Vertecies.Count;
+        }
+        /// <summary>
+        /// Gets a list of all nodes from the input node
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns>List<Node></returns>
+        public List<Node> BreadthFirstTraversal(Node input)
+        {
+            List<Node> solution = new List<Node>();
+            Queue que = new Queue();
+            if(input != null)
+            {
+                que.Enqueue(input);
+                while(que.Count != 0)
+                {
+                    Node node = que.Dequeue() as Node;
+                    solution.Add(node);
+                    Map.Add(node, true);
+                    foreach(var item in node.AdjList)
+                    {
+                        if (!Map.ContainsKey(item.Item1))
+                        {
+                            que.Enqueue(node);
+                        }
+                    }
+                }
+            }
+            return solution;
         }
         
     }
