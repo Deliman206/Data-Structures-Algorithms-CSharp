@@ -48,3 +48,5 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 - Time: O(n) where n is the number of nodes in the List of Vertices on the graph.
 - Space: O(1) Verticies List exists on graph
 
+## White Board
+![Breadth First Graph  Traversal](../Assets/WbBfg.jpeg)
