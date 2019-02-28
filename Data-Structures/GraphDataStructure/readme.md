@@ -24,6 +24,7 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 5. Size()
     - Returns the total number of nodes in the graph
     
+    
 ## Efficiency
 
 1. AddNode()
@@ -50,3 +51,4 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 
 ## White Board
 ![Breadth First Graph  Traversal](../Assets/WbBfg.jpeg)
+![Depth First Traversal](../Assets/WbDepthFirstGraph.jpeg)
